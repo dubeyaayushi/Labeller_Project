@@ -1,0 +1,5 @@
+timestamp,action,element,description,status,url
+2025-11-30T20:28:36.780Z,visit,page,visited main page,success,https://try123.labellerr.com/__cypress/iframes/cypress%5Ce2e%5Cworkspace-test.cy.js?browserFamily=chromium
+2025-11-30T20:28:44.983Z,login,auth0,successfully logged in,success,https://try123.labellerr.com/__cypress/iframes/cypress%5Ce2e%5Cworkspace-test.cy.js?browserFamily=chromium
+2025-11-30T20:28:44.983Z,assertion,url,verify workspace URL,success,https://try123.labellerr.com/__cypress/iframes/cypress%5Ce2e%5Cworkspace-test.cy.js?browserFamily=chromium
+2025-11-30T20:28:44.984Z,assertion,body,verify page loaded,success,https://try123.labellerr.com/__cypress/iframes/cypress%5Ce2e%5Cworkspace-test.cy.js?browserFamily=chromium
