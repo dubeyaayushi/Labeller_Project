@@ -2,7 +2,7 @@
 
 A minimal Cypress framework for testing UI interactions with automatic CSV reporting.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 cypress-labellerr-test/
@@ -18,7 +18,7 @@ cypress-labellerr-test/
 └── package.json                    # Dependencies
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Step 1: Install Dependencies
 ```bash
@@ -47,7 +47,7 @@ npx cypress open
 5. **Wait for redirect** to Labellerr workspace
 6. Then, whatever actions you perform in the workspace are stored in the csv file in ``cypress\results`` folder.
 
-## 📊 CSV Reporting
+## CSV Reporting
 
 After test completion, interactions are automatically saved to:
 ```
@@ -62,7 +62,7 @@ cypress/results/ui-interactions-[timestamp].csv
 - `status`: Success/failure status
 - `url`: Page URL where interaction occurred
 
-## 🎯 Available Commands
+## Available Commands
 
 ### Open Cypress GUI (Recommended)
 ```bash
@@ -70,7 +70,7 @@ npx cypress open
 ```
 
 
-## 📝 Test Features
+## Test Features
 
 - **Handles Auth0 cross-domain login**
 - **Pauses for manual authentication**

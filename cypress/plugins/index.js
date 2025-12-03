@@ -6,7 +6,7 @@ module.exports = (on, config) => {
     saveInteractionsToCSV: (interactions) => {
       try {
         if (!interactions || interactions.length === 0) {
-          console.log('❌ No interactions to save')
+          console.log(' No interactions to save')
           return null
         }
 
@@ -38,12 +38,12 @@ module.exports = (on, config) => {
         
         // Write file
         fs.writeFileSync(filepath, csv)
-        console.log(`✅ Interactions saved to: ${filepath}`)
-        console.log(`📈 Total interactions recorded: ${interactions.length}`)
+        console.log(`Interactions saved to: ${filepath}`)
+        console.log(`Total interactions recorded: ${interactions.length}`)
         
         return `CSV saved: ${filepath} (${interactions.length} interactions)`
       } catch (error) {
-        console.error('❌ Failed to save CSV:', error)
+        console.error(' Failed to save CSV:', error)
         throw error
       }
     }

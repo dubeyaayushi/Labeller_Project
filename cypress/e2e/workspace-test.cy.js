@@ -18,7 +18,7 @@ describe('Workspace Tests with Auth0 Login', () => {
   })
 
   it('Complete login and test workspace', () => {
-    cy.log('🎯 Starting test - will pause for manual login')
+    cy.log('Starting test - will pause for manual login')
     
     // Try to find and click login button
     cy.get('body').then(($body) => {
@@ -49,7 +49,7 @@ describe('Workspace Tests with Auth0 Login', () => {
 
     // Handle Auth0 domain with manual login
     cy.origin('https://labellerr.us.auth0.com', () => {
-      cy.log('🔐 AUTH0 LOGIN REQUIRED')
+      cy.log('AUTH0 LOGIN REQUIRED')
       cy.log('================================')
       cy.log('1. Enter your email')
       cy.log('2. Enter your password') 
@@ -68,7 +68,7 @@ describe('Workspace Tests with Auth0 Login', () => {
     // After successful login
     cy.url({ timeout: 30000 }).should('include', '/workspace')
     recordInteraction('login', 'auth0', 'successfully logged in', 'success')
-    cy.log('✅ Successfully logged in! Starting workspace tests...')
+    cy.log('Successfully logged in! Starting workspace tests...')
 
     // Test workspace functionality
     testWorkspaceUI()
@@ -95,7 +95,7 @@ describe('Workspace Tests with Auth0 Login', () => {
     })
 
     // Interactive testing - click around
-    cy.log('🔍 Testing interactive elements...')
+    cy.log('Testing interactive elements...')
     
     // Safe clicking - only click if element exists and is visible
     const clickableElements = ['Projects', 'Datasets']
@@ -118,7 +118,7 @@ describe('Workspace Tests with Auth0 Login', () => {
   }
 
   function testUIComponents() {
-    cy.log('📊 Testing UI components...')
+    cy.log(' Testing UI components...')
     
     const uiComponents = [
       { selector: 'button', name: 'buttons' },
@@ -149,6 +149,6 @@ describe('Workspace Tests with Auth0 Login', () => {
       url: window.location.href
     }
     interactions.push(interaction)
-    cy.log(`📝 ${action}: ${element} - ${description}`)
+    cy.log(`${action}: ${element} - ${description}`)
   }
 })
