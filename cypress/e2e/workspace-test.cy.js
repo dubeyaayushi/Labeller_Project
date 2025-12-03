@@ -1,4 +1,4 @@
-describe('Workspace Tests with Auth0 Login', () => {
+describe('Workspace Tests with Authorization Login', () => {
   let interactions = []
 
   before(() => {
@@ -40,16 +40,16 @@ describe('Workspace Tests with Auth0 Login', () => {
         }
       })
       
-      // If no login button found, just continue to Auth0
+      // If no login button found, just continue to Authorization
       if (!foundLogin) {
-        cy.log('No login button found, proceeding to Auth0')
+        cy.log('No login button found, proceeding to Authorization')
         recordInteraction('navigation', 'direct', 'navigated directly to auth', 'success')
       }
     })
 
-    // Handle Auth0 domain with manual login
+    // Handle Authorization domain with manual login
     cy.origin('https://labellerr.us.auth0.com', () => {
-      cy.log('AUTH0 LOGIN REQUIRED')
+      cy.log('Authorization LOGIN REQUIRED')
       cy.log('================================')
       cy.log('1. Enter your email')
       cy.log('2. Enter your password') 
@@ -58,7 +58,7 @@ describe('Workspace Tests with Auth0 Login', () => {
       cy.log('5. THEN click "Resume" button below!')
       cy.log('================================')
       
-      // Wait for Auth0 page to load
+      // Wait for Authorization page to load
       cy.get('body', { timeout: 20000 }).should('be.visible')
       
       // Pause for manual login
