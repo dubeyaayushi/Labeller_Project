@@ -1,4 +1,4 @@
-# Cypress UI Testing Framework with CSV Reporting
+# Cypress testing framework for laberllerr.
 
 A minimal Cypress framework for testing UI interactions with automatic CSV reporting.
 
@@ -41,7 +41,7 @@ npx cypress open
 
 ## When you run the framework
 
-1. **Enter your email** in the Auth0 login form
+1. **Enter your email** in the Authorization login form
 2. **Enter your password** 
 4. **Click login button**
 5. **Wait for redirect** to Labellerr workspace
