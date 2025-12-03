@@ -68,7 +68,29 @@ cypress/results/ui-interactions-[timestamp].csv
 ```bash
 npx cypress open
 ```
+### Issue Faced During Testing
+## 1 Problem
+- Website Cypress ko **bot** detect kar rahi thi  
+- Baar-baar **"Verify you are human"** loop aa raha tha  
+- Checkbox manually select karne ke baad bhi page **reload ho jata tha**  
+- Anti-bot protection ko Cypress **bypass nahi kar pa raha tha**
 
+## Solution
+- Chrome automation flags (like `navigator.webdriver = true`) detection ki wajah se issue aa raha tha  
+- Testing **Electron browser** par run ki, jisme automation traces hide ho jaate hain  
+- Isse anti-bot system trigger nahi hua aur tests **successfully run** ho gaye
+
+## 2 Problem
+- Cypress expected cypress/support/e2e.js file
+
+## Solution
+-Created an empty file in the right location
+
+## 3 Problem
+-Not knowing when to click "Resume" after manual login
+
+## Solution
+-Clear instructions to resume only after reaching workspace
 
 ## Test Features
 
