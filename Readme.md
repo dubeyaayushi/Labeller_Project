@@ -1,4 +1,4 @@
-# Cypress testing framework for laberllerr.
+# Cypress testing framework for labellerr.
 
 A minimal Cypress framework for testing UI interactions with automatic CSV reporting.
 
@@ -72,7 +72,7 @@ npx cypress open
 
 ## Test Features
 
-- **Handles Auth0 cross-domain login**
+- **Handles Authorization cross-domain login**
 - **Pauses for manual authentication**
 - **Records all UI interactions**
 - **Automatic CSV reporting**
