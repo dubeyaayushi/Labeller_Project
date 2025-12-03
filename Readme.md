@@ -70,27 +70,27 @@ npx cypress open
 ```
 ### Issue Faced During Testing
 ## 1 Problem
-- Website Cypress ko **bot** detect kar rahi thi  
-- Baar-baar **"Verify you are human"** loop aa raha tha  
-- Checkbox manually select karne ke baad bhi page **reload ho jata tha**  
-- Anti-bot protection ko Cypress **bypass nahi kar pa raha tha**
+- The website was detecting Cypress as a **bot**  
+- It kept triggering the **"Verify you are human"** loop  
+- Even after manually checking the checkbox, the page would **reload repeatedly**  
+- Cypress **could not bypass** the anti-bot protection
 
 ## Solution
-- Chrome automation flags (like `navigator.webdriver = true`) detection ki wajah se issue aa raha tha  
-- Testing **Electron browser** par run ki, jisme automation traces hide ho jaate hain  
-- Isse anti-bot system trigger nahi hua aur tests **successfully run** ho gaye
+- The issue was caused by Chrome automation flags (like `navigator.webdriver = true`) being detected  
+- Ran the tests on **Electron browser**, which hides automation traces  
+- This prevented the anti-bot system from triggering and the tests **ran successfully**
 
 ## 2 Problem
 - Cypress expected cypress/support/e2e.js file
 
 ## Solution
--Created an empty file in the right location
+- Created an empty file in the right location
 
 ## 3 Problem
--Not knowing when to click "Resume" after manual login
+- Not knowing when to click "Resume" after manual login
 
 ## Solution
--Clear instructions to resume only after reaching workspace
+- Clear instructions to resume only after reaching workspace
 
 ## Test Features
 
